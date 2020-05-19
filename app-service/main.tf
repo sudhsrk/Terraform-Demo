@@ -4,13 +4,13 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "resource_group_terraform" {
-  name     = "terraform_resource_group"
+resource "azurerm_resource_group_84" "resource_group_terraform_84" {
+  name     = "terraform_resource_group_84"
   location = "West Europe"
 }
 
-resource "azurerm_app_service_plan" "app_service_plan_terraform" {
-  name                = "terraform-appserviceplan"
+resource "azurerm_app_service_plan_84" "app_service_plan_terraform_84" {
+  name                = "terraform-appserviceplan_84"
   location            = azurerm_resource_group.resource_group_terraform.location
   resource_group_name = azurerm_resource_group.resource_group_terraform.name
 
@@ -20,8 +20,8 @@ resource "azurerm_app_service_plan" "app_service_plan_terraform" {
   }
 }
 
-resource "azurerm_app_service" "app_service_terraform" {
-  name                = "app-service-terraform-2020"
+resource "azurerm_app_service_84" "app_service_terraform_84" {
+  name                = "app-service-terraform-2020-84"
   location            = azurerm_resource_group.resource_group_terraform.location
   resource_group_name = azurerm_resource_group.resource_group_terraform.name
   app_service_plan_id = azurerm_app_service_plan.app_service_plan_terraform.id
